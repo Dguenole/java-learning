@@ -1,43 +1,34 @@
 public class Main {
+
     public static void main(String[] args){
-        Marque apple = new Marque("apple");
-        Incassable rinoshield = new Incassable("Rinoshield", true);
+        Voiture voiture =new Voiture();
+        voiture.start();
 
-        Telephone iphone =new Telephone(34000, "iphone", apple, rinoshield);
-        System.out.println(rinoshield.nom);
+        Bateau bateau = new Bateau();
+        bateau.start();
+    }
 
+}
+class Vehicule{
+    void start(){
+        System.out.println("VROUMMMM");
     }
 }
 
+class Voiture extends Vehicule{
 
-class Telephone{
-    int pixels;
-    String nom;
-    Marque marque;
-    Incassable incassable;
+    @Override
+    void start(){
+        super.start();
+        allumerfeux();
+        }
 
-    public Telephone(int pixels, String nom, Marque marque, Incassable incassable) {
-        this.pixels = pixels;
-        this.nom = nom;
-        this.marque = marque;
-        this.incassable = incassable;
+    void allumerfeux(){
+        System.out.println("Allumer feu!!!!!");
     }
 }
 
-class Marque{
-    String nom;
+class Bateau extends Vehicule{
 
-    public Marque(String nom) {
-        this.nom = nom;
-    }
-}
 
-class Incassable{
-    String nom;
-    boolean verre_tramper;
-
-    public Incassable(String nom, boolean verre_tramper) {
-        this.nom = nom;
-        this.verre_tramper = verre_tramper;
-    }
 }
