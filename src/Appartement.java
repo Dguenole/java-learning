@@ -38,4 +38,9 @@ class Appartement extends Bien{
     public double calculerPrixFinal(){
         return getPrix();
     }
+
+    @Override
+    public String toString(){
+        return "[APPARTEMENT] " + super.toString() + " (étage " + etage + ")";
+    }
 }

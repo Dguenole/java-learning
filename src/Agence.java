@@ -11,4 +11,15 @@ class Agence{
         catalogue.remove(bien);
     }
 
+    public double calculeValeurTotal() {
+        double total = 0;
+        for (Bien bien : catalogue) {
+            total += bien.calculerPrixFinal();
+        }
+        return total;
+    }
+    @Override
+    public String toString () {
+        return "Valeur Totale " + "=" + calculeValeurTotal();
+    }
 }

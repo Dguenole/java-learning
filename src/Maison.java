@@ -30,4 +30,8 @@ class Maison extends Bien{
         return getPrix() + (surfaceJardin * 50000);
     }
 
+    @Override
+    public String toString(){
+        return "[MAISON] " + super.toString() + " (jardin " + surfaceJardin + " m²)";
+    }
 }

@@ -16,6 +16,9 @@ public class Main {
         Agence1.ajouterBien(A3);
 
         System.out.println(Agence1.catalogue);
-        
+        System.out.println(Agence1.toString());
+
+
+
     }
 }
