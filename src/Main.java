@@ -20,6 +20,8 @@ public class Main {
 
         Agence1.afficherLouables();
         System.out.println(Agence1.biensSousPrix(450000));
+        System.out.println(Agence1.biensSousPrix(600000));
+
 
 
 
