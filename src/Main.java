@@ -4,9 +4,9 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args){
-        Appartement A1 = new Appartement(1,"Ouakam",50,300000,4,false,100000);
+        Appartement A1 = new Appartement(1,"Ouakam",50,300000,4,false,100000,true);
         Maison A2 = new Maison(2,"Mermoz",70,400000,10,4);
-        Appartement A3 = new Appartement(3,"allmadie",60,500000,6,true,200000);
+        Appartement A3 = new Appartement(3,"allmadie",60,500000,6,true,200000, false);
         System.out.println(A1.calculerPrixFinal());
 
         Agence Agence1 = new Agence();
@@ -17,6 +17,9 @@ public class Main {
 
         System.out.println(Agence1.catalogue);
         System.out.println(Agence1.toString());
+
+        Agence1.afficherLouables();
+        System.out.println(Agence1.biensSousPrix(450000));
 
 
 
