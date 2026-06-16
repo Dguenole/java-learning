@@ -1,3 +1,5 @@
+package immobilier;
+
 class Appartement extends Bien implements Louable {
     private int etage;
     private boolean ascenseur;
@@ -5,7 +7,7 @@ class Appartement extends Bien implements Louable {
     private boolean disponible;
 
     public int getEtage() {
-        return etage;
+        return this.etage;
     }
 
     public void setEtage(int etage) {
@@ -13,7 +15,7 @@ class Appartement extends Bien implements Louable {
     }
 
     public float getChargeDeCopropriete() {
-        return chargeDeCopropriete;
+        return this.chargeDeCopropriete;
     }
 
     public void setChargeDeCopropriete(float chargeDeCopropriete) {
@@ -21,7 +23,7 @@ class Appartement extends Bien implements Louable {
     }
 
     public boolean isAscenseur() {
-        return ascenseur;
+        return this.ascenseur;
     }
 
     public void setAscenseur(boolean ascenseur) {
@@ -36,22 +38,20 @@ class Appartement extends Bien implements Louable {
         this.disponible = disponible;
     }
 
-    @Override
-    public double calculerPrixFinal(){
-        return getPrix();
+    public double calculerPrixFinal() {
+        return (double)this.getPrix();
     }
 
-    @Override
-    public String toString(){
-        return "[APPARTEMENT] " + super.toString() + " (étage " + etage + ")";
+    public String toString() {
+        String var10000 = super.toString();
+        return "[APPARTEMENT] " + var10000 + " (étage " + this.etage + ")";
     }
 
-    @Override
     public double calculerLoyerMensuel() {
-        return getPrix() * 0.01;
+        return (double)this.getPrix() * 0.01;
     }
-    @Override
+
     public boolean estDisponible() {
-        return disponible;
+        return this.disponible;
     }
 }

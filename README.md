@@ -6,7 +6,7 @@ Concepts POO mis en œuvre
 
 
 Classe abstraite : Bien définit le socle commun et impose une méthode abstraite calculerPrixFinal().
-Héritage : Appartement et Maison étendent Bien avec leurs attributs propres.
+Héritage : immobilier.Agence.Appartement et Maison étendent Bien avec leurs attributs propres.
 Polymorphisme : Agence.calculerValeurTotale() parcourt le catalogue et appelle calculerPrixFinal() sur chaque bien sans connaître son type concret.
 Interface : Louable définit un contrat (calculerLoyerMensuel(), estDisponible()) implémenté par les biens louables, indépendamment de la hiérarchie d'héritage.
 Pattern matching instanceof : utilisé pour identifier les biens louables lors du filtrage.
